@@ -18,13 +18,13 @@ Tots son broadcast perque va dirigit a tots els dispositius de la red osigui que
 
 ![alt text](image.png)
 
-![][image2]
+![alt text](image-1.png)
 
-![][image3]
+![alt text](image-2.png)
 
-![][image4]
+![alt text](image-3.png)
 
-![][image5]
+![alt text](image-4.png)
 
 Servidor port 67
 
@@ -32,12 +32,12 @@ Client port 68
 
 * **Quin camp de la capçalera DHCP s'utilitza per identificar unívocament la targeta de xarxa (*NIC*) del client?**
 
-![][image6]
+![alt text](image-5.png)
 
 Client Mac address: 00000000000000000000
 
 * **Identifica el número o nom de les Opcions DHCP (*DHCP Options*) encarregades de transmetre la porta d'enllaç per defecte (*Router*), els servidors DNS i el nom de domini.**  
-2. ![][image7]  
+2. ![alt text](image-6.png)
    
 
 Les opcions DHCP són dades que el servidor envia al client, a part de la IP, dins dels missatges Offer i ACK. La porta d’enllaç per defecte (router) es transmet amb l’opció 3, els servidors DNS amb l’opció 6 i el nom de domini amb l’opció 15\. 
@@ -49,13 +49,12 @@ Les opcions DHCP són dades que el servidor envia al client, a part de la IP, di
 1. **Interfície i Emmagatzematge:**  
    * **Configuració de la interfície de xarxa eth0.**
 
-**![][image8]**
+![alt text](image-7.png)
 
-**![][image9]**
-
+![alt text](image-8.png)
  En l’Ubuntu he instal·lat ssh
 
-**![][image10]**
+![alt text](image-9.png)
 
 Activo el servei
 
