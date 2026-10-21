@@ -50,7 +50,7 @@ Les opcions DHCP són dades que el servidor envia al client, a part de la IP, di
    * **Configuració de la interfície de xarxa eth0.**
 
 ![alt text](image-7.png)
-
+![alt text](image-33.png)
 ![alt text](image-8.png)
  En l’Ubuntu he instal·lat ssh
 
@@ -58,59 +58,59 @@ Les opcions DHCP són dades que el servidor envia al client, a part de la IP, di
 
 Activo el servei
 
-**![][image11]**
+![alt text](image-10.png)
 
 Compruebo que está funcionan
 
-**![][image12]**
+![alt text](image-11.png)
 
 busco la ip
 
-**![][image13]**
+![alt text](image-12.png)
 
 Ho cenecto amb la terminal del meu pc
 
-**![][image14]**
+![alt text](image-13.png)
 
 Entro a Kea 
 
-![][image15]
+![alt text](image-14.png)
 
 Copio i pego la configuració y poso el meu numero de llista on les x
 
-![][image16]
+![alt text](image-15.png)
 
-poso la interfície correcte que em demana el exercici
+poso la interfície correcte del meu ubuntu
 
 * **Model de base de dades de cessions en memòria (memfile) amb persistència activada.**  
-  * **![][image17]**  
+![alt text](image-16.png)
     confirma que el model memfile amb persistència activada guarda les cessions en un fitxer del disc.   
 2. **Paràmetres Globals i de Temps:**  
    * **Temps de cessió (*valid-lifetime*): 2 hores (7200 segons).**  
    * **Temps de renovació (*renew-timer*): 1 hora (3600 segons).**  
-     **![][image18]**  
+     ![alt text](image-17.png)  
 3. **Subxarxa i Pool Dinàmic:**  
-   * **Adreça de xarxa: 192.168.x.0/24.**
+ **Adreça de xarxa: 192.168.x.0/24.**
 
-   **![][image19]**
+   ![alt text](image-18.png)
 
    * A subnet4 he definit la subxarxa 192.168.9.0/24  
        
    * **Rang d'adreces dinàmiques assignables (*pool*): Des de la 192.168.x.50 fins a la 192.168.x.200.**  
        
-   * **![][image20]**  
+   * ![alt text](image-19.png)
      Y tambe he definit el pool de la 192.168.9.50 a la 192.168.9.200  
    *   
 4. **Opcions de Xarxa (*option-data*):**  
    * **Encaminador / Porta d'enllaç: 192.168.x.1.**  
-     ![][image21]  
+     ![alt text](image-20.png)
      He definit la porta d'enllaç  
    * **Servidors DNS primari i secundari: 1.1.1.1 i 8.8.8.8.**  
-   * **![][image22]**  
+![alt text](image-21.png)  
      Modifico el Servidor DNS tal com diu el enunciat  
    * **Nom de domini local: oficina.local.**
 
-**![][image23]**
+![alt text](image-22.png)
 
 He afegit un "name": "domain-name" , i un "data": "oficina.local" dins de "option-data":
 
@@ -124,19 +124,19 @@ I he posat totes la red ha publica com em vas dir a clase
 
 **Adreça MAC de la targeta (hw-address): aa:bb:cc:11:22:33.**
 
-**![][image24]**
+![alt text](image-23.png)
 
 He canviat l'adreça MAC de la tarjeta com m’indica al enunciat
 
 **Adreça IP assignada: 192.168.x.20.**
 
-**![][image24]**
+![alt text](image-24.png)
 
 He posat 192.169.9.50 per ficarl-la publica com em vas dir a clase
 
 **Nom de l'equip (hostname): impresora-dir.**
 
-**![][image25]**
+![alt text](image-25.png)
 
 He afegit "hostname": "impresora-dir" per posar nom a l’equip
 
@@ -144,7 +144,7 @@ He afegit "hostname": "impresora-dir" per posar nom a l’equip
 
 **Indica quines eines o comandes utilitza Kea o el sistema per comprovar que el fitxer JSON no conté errors de sintaxi abans d'iniciar el servei.** 
 
-**![][image26]**
+![alt text](image-26.png)
 
 ##### **Bloc 4: Comprovació, Diagnòstic i Resolució d'Incidències**
 
@@ -152,7 +152,7 @@ He afegit "hostname": "impresora-dir" per posar nom a l’equip
 
 * **Quines comandes de systemctl permeten verificar l'estat, reiniciar o aturar el servei de Kea DHCP?**
 
-**![][image27]**
+![alt text](image-27.png)
 
 Sudo systemctl status kea-dhcp4-server serveix per veure l'estat del servei 
 
@@ -163,13 +163,13 @@ Sudo systemctl stop kea-dhcp4-server serveix per aturar el servei
 
 * **Mitjançant quines comandes o utilitats del sistema (journalctl / registres) es poden consultar les peticions i incidències del servei Kea?**
 
-**![][image28]**
+![alt text](image-28.png)
 
 Aquesta comanda mostra els registres del servei Kea DHCP, i serveix per comprovar que funciona correctament i per trobar errors o veure les peticions dels clients. 
 
 * **En quina ruta i quin fitxer emmagatzema Kea la llista de cessions actives (*leases*) quan s'utilitza el motor memfile?**
 
-**![][image29]**
+![alt text](image-29.png)
 
 La ruta es /var/lib/kea/ y el fitxer es kea-leases4.csv
 
@@ -208,3 +208,5 @@ ipconfig /renew sol·licita serveix per una IP nova al servidor DHCP
 **Fitxers de Registre i Gestió: Cessions actives (kea-leases4.csv), dimoni de sistema (kea-dhcp4-server) i registre de logs (journalctl).**
 
 **Diagnòstic de Xarxa: Captura de paquets (tcpdump / Wireshark) i comandes de client (ipconfig / dhclient).** 
+
+![alt text](image-31.png)
